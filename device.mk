@@ -22,7 +22,8 @@ PRODUCT_PACKAGES += \
     audio.primary.rpi \
     audio.primary.rpi_hdmi \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    acmesimpledaemon
 
 PRODUCT_PACKAGES += \
     tinycap \
