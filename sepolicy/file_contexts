@@ -54,4 +54,4 @@
 /vendor/bin/hw/android\.hardware\.media\.c2@1\.0-service-v4l2(.*)?           u:object_r:mediacodec_exec:s0
 
 # ACME
-/vendor/bin/hw/acmesimpledaemon                                              u:object_r:proximityd_exec:s0
+/vendor/bin/hw/acmenativedaemon                                              u:object_r:proximityd_exec:s0
