@@ -10,8 +10,25 @@ if filereadable("/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/app
   set csverb
 endif
 
-"ADD INCLUDE header file paths for proximity library
+"INCLUDE paths
+"Android.bp
+"header_libs: [
+"    "libacmeproximityshim_headers",
+"    "liblog_headers",
+"    "libhardware_headers",
+"],
+"libacmeproximityshim_headers"
 if isdirectory('/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/proximity/include')
   set path+=/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/proximity/include
+endif
+
+"liblog_headers",
+if isdirectory('/home/jeonghum/Projects/android-13.0.0_r67/system/logging/liblog/include')
+  set path+=/home/jeonghum/Projects/android-13.0.0_r67/system/logging/liblog/include
+endif
+
+"libhardware_headers",
+if isdirectory('/home/jeonghum/Projects/android-13.0.0_r67/hardware/libhardware/include')
+  set path+=/home/jeonghum/Projects/android-13.0.0_r67/hardware/libhardware/include
 endif
 
