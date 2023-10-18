@@ -1,12 +1,13 @@
+
 "CTAGS paths
-if filereadable("/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/app/native_daemon/tags")
-  set tags+=/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/app/native_daemon/tags
+if filereadable(expand(VIM_ANDROID_TOP).'/device/brcm/rpi4/app/native_daemon/tags')
+  let &tags=&tags.','.expand(VIM_ANDROID_TOP).'/device/brcm/rpi4/app/native_daemon/tags'
 endif
 
 "CSCOPE paths
-if filereadable("/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/app/native_daemon/cscope.out")
+if filereadable(expand(VIM_ANDROID_TOP).'/device/brcm/rpi4/app/native_daemon/cscope.out')
   set nocsverb
-  cs add /home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/app/native_daemon/cscope.out
+  exec 'cs add '.expand(VIM_ANDROID_TOP).'/device/brcm/rpi4/app/native_daemon/cscope.out'
   set csverb
 endif
 
@@ -18,17 +19,17 @@ endif
 "    "libhardware_headers",
 "],
 "libacmeproximityshim_headers"
-if isdirectory('/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/proximity/include')
-  set path+=/home/jeonghum/Projects/android-13.0.0_r67/device/brcm/rpi4/proximity/include
+if isdirectory(expand(VIM_ANDROID_TOP).'/device/brcm/rpi4/proximity/include')
+  exec 'set path+='.expand(VIM_ANDROID_TOP).'/device/brcm/rpi4/proximity/include'
 endif
 
 "liblog_headers",
-if isdirectory('/home/jeonghum/Projects/android-13.0.0_r67/system/logging/liblog/include')
-  set path+=/home/jeonghum/Projects/android-13.0.0_r67/system/logging/liblog/include
+if isdirectory(expand(VIM_ANDROID_TOP).'/system/logging/liblog/include')
+  exec 'set path+='.expand(VIM_ANDROID_TOP).'/system/logging/liblog/include'
 endif
 
 "libhardware_headers",
-if isdirectory('/home/jeonghum/Projects/android-13.0.0_r67/hardware/libhardware/include')
-  set path+=/home/jeonghum/Projects/android-13.0.0_r67/hardware/libhardware/include
+if isdirectory(expand(VIM_ANDROID_TOP).'/hardware/libhardware/include')
+  exec 'set path+='.expand(VIM_ANDROID_TOP).'/hardware/libhardware/include'
 endif
 
