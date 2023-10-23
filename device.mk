@@ -23,7 +23,9 @@ PRODUCT_PACKAGES += \
     audio.primary.rpi_hdmi \
     audio.r_submix.default \
     audio.usb.default \
-    acmenativedaemon
+    acmenativedaemon \
+    libacmeproximityjni \
+    acmejavadaemon
 
 PRODUCT_PACKAGES += \
     tinycap \
